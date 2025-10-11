@@ -1,0 +1,60 @@
+@import "./blocks/header.scss";
+@import "./blocks/Block-one.scss";
+@import "./blocks/block-two.scss";
+@import "./blocks/block-three.scss";
+
+@font-face {
+    font-family: "Merriweather";
+    src: url(Fonts/Merriweather/Merriweather-Regular.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(Fonts/Roboto/Roboto.ttf);
+}
+
+
+html {
+    width: 100%;
+    max-width: 1520px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+
+
+.landscape-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    padding: 2rem 0;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+.h6, .h5, .h4 {
+    font-family: Merriweather;
+}
+
+@media (min-width: 769px) {
+    .icons {
+        flex-direction: column !important;
+        margin-left: 90%;
+    }
+}

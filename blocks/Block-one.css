@@ -1,0 +1,9 @@
+.block-one {
+  max-width: 1520px;
+  width: 100%;
+  height: 700px;
+}
+
+.btn-primary {
+  --bs-btn-bg: #FF7E3587;
+}/*# sourceMappingURL=Block-one.css.map */
