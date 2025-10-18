@@ -24,6 +24,10 @@
   --bs-btn-bg: #FF7E3587;
 }
 
+.text-black {
+  color: #FFDF9E;
+}
+
 .brown-bg {
   background-color: #2d1403;
   padding: 2rem 0;
@@ -191,6 +195,10 @@
   border-radius: 8px;
 }
 
+.tab_button {
+  margin: 0px;
+}
+
 @font-face {
   font-family: "Merriweather";
   src: url(Fonts/Merriweather/Merriweather-Regular.ttf);
@@ -209,6 +217,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: "Roboto" !important;
 }
 
 .icons {
@@ -216,7 +225,7 @@ html {
   flex-direction: row;
   align-items: center;
   position: relative;
-  top: 100px;
+  bottom: 120px;
 }
 
 .landscape-grid {
@@ -236,6 +245,30 @@ html {
 
 .h6, .h5, .h4 {
   font-family: Merriweather;
+}
+
+ul {
+  font-size: 14px !important;
+}
+
+.tab_button {
+  font-family: Roboto !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  background-color: white !important;
+  border: 1px solid black !important;
+  color: black !important;
+}
+
+.tab_button:hover {
+  background-color: #FFEFE3 !important;
+  border: 1px solid #FF7E35 !important;
+  color: #FF7E35 !important;
+}
+
+.image_grid {
+  width: 312px;
+  height: 190px;
 }
 
 @media (min-width: 769px) {
