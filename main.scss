@@ -12,7 +12,6 @@
     src: url(Fonts/Roboto/Roboto.ttf);
 }
 
-
 html {
     width: 100%;
     max-width: 1520px;
@@ -26,14 +25,53 @@ html {
     font-family: "Roboto" !important;
 }
 
+.btn-custom {
+    cursor: pointer !important;
+    border: 0 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.btn-custom:hover {
+    border: 0 !important;
+    background-color: transparent !important;
+    transform: scale(1.05);
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.navbar-nav .nav-item {
+    margin-bottom: 0.25rem !important;
+    font-size: 18px !important;
+}
 .icons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     position: relative;
     bottom: 120px;
 }
 
+.button_modal {
+    position: relative;
+    left: 90px;
+}
+
+.first-block_images {
+    height: 88px !important;
+}
+
+.carousel-control-prev {
+    margin-left: -70px !important;
+}
+.carousel-control-next {
+    margin-right: -70px !important;
+}
 
 .landscape-grid {
     display: grid;
@@ -45,12 +83,24 @@ html {
 .grid-item {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
     padding: 1.5rem;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: auto;
 }
+
+.grid-item p {
+    text-align: left;
+    align-self: flex-start;
+    width: auto;
+}
+
 .h6, .h5, .h4 {
     font-family: Merriweather;
+}
+.responsive-heading {
+    font-size: 36px;
 }
 ul {
     font-size: 14px !important;
@@ -75,9 +125,113 @@ ul {
     height: 190px;
 }
 
-@media (min-width: 769px) {
+.accordion-button:hover {
+    background-color: #FFEFE3 !important; 
+    border: 1px solid #FF7E35 !important; 
+    color: #FF7E35 !important;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #FFEFE3 !important;
+    color: #FF7E35 !important;
+    border: 1px solid #FF7E35 !important; 
+}
+
+
+
+
+
+
+
+.tree-img {
+    max-width: 40px;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+.tree-line {
+    width: 30%;
+    max-width: 300px;
+    height: 1px;
+    background-color: #34642C;
+    margin-top: -2px;
+}
+
+
+@media (max-width: 768px) {
+    .tree-img {
+        max-width: 60px;
+    }
+    .tree-line {
+        width: 40%;
+    }
+
+    .button_modal {
+        position: inherit !important;
+        left: 0px !important;
+        margin: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .tree-img {
+        max-width: 50px;
+    }
+    .tree-line {
+        width: 50%;
+    }
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .carousel-control-prev {
+        margin-left: -45px !important;
+    }
+    .carousel-control-next {
+        margin-right: -45px !important;
+    }
+}
+
+
+@media (max-width: 1024px) {
     .icons {
-        flex-direction: column !important;
-        margin-left: 90%;
+        flex-direction: row;
+        top: 30px;
+        right: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .block-two {
+        margin-top: 30px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        flex-direction: row;
+        float: left;
+    }
+    .responsive-heading {
+        font-size: 24px !important;
+    }
+    .btn {
+        font-size: 16px !important;
+    }
+    .first-block_images {
+        height: 66px !important;
+    }
+    .first-block_images-text {
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 600px) {
+    .icons {
+        margin-left: 50% !important;
+    }
+    .footer_new-icon {
+        margin-left: 50px !important;
     }
 }

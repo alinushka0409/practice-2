@@ -30,14 +30,17 @@
                         <a class="nav-link text-white" href="#4">Ландшафт</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#5">Отзывы</a>
+                        <a class="nav-link text-white" href="#5">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#6">Отзывы</a>
                     </li>
                 </ul>
             </div>
             
             
 
-            <div class="d-ld-block ms-auto">
+            <div class="d-lg-block d-none ms-auto">
                 <div class="d-flex align-items-center">
                     <img src="Images/phone icon.png" alt="" style="height: 15px; margin: 5px;"> 
                     <span>тел.+7 (981) 98-50-04</span>
@@ -53,34 +56,34 @@
 
     <div class="block-one container-fluid position-relative" style="height: 746px;">
         <img class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" src="Images/Главная картинка.jpg" alt="" style="z-index: -1;">
-        <div class="position-relative z-1" style="margin-left: 90px; padding-top: 150px;">
+        <div class="position-relative z-1" style="margin-left: 90px; padding-top: 150px; width: 80%;">
             <img src="Images/ЛОГОТИП главная.png" alt="">
-            <p style="color: white; font-size: 36px; font-family: Merriweather !important;">Благоустройство и озеленение участков</p>
+            <p class="responsive-heading w-75" style="color: white; font-size: 36px; font-family: Merriweather !important;">Благоустройство и озеленение участков</p>
 
             
         </div>
 
-        <div style="position: relative; left: 90px;"><button class="btn btn-outline-light btn-warning rounded-pill-3 px-5 text-black" type="button" data-bs-toggle="modal" data-bs-target="#myModal" style="border: 2px solid #FF8C00; background-color: rgba(255, 140, 0, 0.5); font-size: 24px;"><span style="color: #FFDF9E;">Оставить заявку</span></button></div>
+        <div class=" button_modal text-center text-md-start"><button class="btn btn-outline-light btn-warning rounded-pill-3 px-5 text-black" type="button" data-bs-toggle="modal" data-bs-target="#myModal" style="border: 2px solid #FF8C00; background-color: rgba(255, 140, 0, 0.5); font-size: 24px;"><span style="color: #FFDF9E;">Оставить заявку</span></button></div>
 
         <div class="modal fade" tabindex="-1" id="myModal" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                     <div class="row">
-                        <div class="col-md-4 text-center d-flex justify-content-center" style="background-color: wheat;">
+                        <div class="col-xl-4 text-center d-flex justify-content-center d-none d-xl-flex" style="background-color: wheat;">
                             <img src="Images/ЛОГОТИП главная.png" alt="">
                         </div>
-                        <div class="col-md-8 text-white pt-3" style="background-color: #504B47;">
-                            <h5 style="color: wheat;">Получить консультацию специалиста</h5>
+                        <div class="col-xl-8 text-white pt-3 " style="background-color: #504B47;">
+                            <h5 style="color: wheat; margin-left: 15px;">Получить консультацию специалиста</h5>
                             <div class="modal-body">
                                 <form>
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Ваше имя *</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
+                                        <input type="text" class="form-control" id="name" placeholder="Имя*" minlength="2" required>
+                                        <div class="invalid-feedback">Пожалуйста, введите имя (минимум 2 символа)</div>
                                     </div>
                                     
                                     <div class="mb-3">
-                                        <label for="phone" class="form-label">Телефон *</label>
-                                        <input type="tel" class="form-control" id="phone" placeholder="+7 (___) ___-__-__" required>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Телефон*" pattern="[\+]?[0-9\s\-\(\)]+" required>
+                                        <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона</div>
                                     </div>
                                     
                                     <div class="mb-3">
@@ -89,11 +92,12 @@
                                             <label class="form-check-label" for="agreement">
                                                 Согласен с <a href="#" style="color: wheat;">политикой конфиденциальности</a>
                                             </label>
+                                            <div class="invalid-feedback">Необходимо согласие с политикой конфиденциальности</div>
                                         </div>
                                     </div>
 
                                     <div class="mt-4">
-                                        <button type="submit" class="btn btn-warning w-100 px-5 " style="border: 2px solid #FF8C00; background-color: rgba(255, 140, 0, 0.5);">Отправить заявку</button>
+                                        <button type="submit" class="btn btn-warning w-100 px-5 " style="border: 2px solid #FF8C00; background-color: rgba(255, 140, 0, 0.5); color: wheat;">Отправить</button>
                                         <button type="button" class="btn btn-outline-light w-100 mt-2" data-bs-dismiss="modal">Закрыть</button>
                                     </div>
                                 </form>
@@ -104,39 +108,42 @@
             </div>
         </div>
 
-        <div class="icons" style="gap: 15px; margin-left: 85%;">
-            <div><img src="Images/Mask Group.png" alt=""></div>
-            <div><img src="Images/Mask Group2.png" alt=""></div>
-            <div><img src="Images/Mask Group3.png" alt=""></div>
+        <div class="icons" style="gap: 15px; margin-left: 85%; overflow-y: hidden;">
+            <button class="border-0 btn btn-custom"><img src="Images/Mask Group.png" alt=""></button>
+            <button class="border-0 btn btn-custom"><img src="Images/Mask Group2.png" alt=""></button>
+            <button class="border-0 btn btn-custom"><img src="Images/Mask Group3.png" alt=""></button>
         </div>
     </div>
 
 
 
     <div class="block-two container mx-auto" style="margin-top: -50px;">
-        <div class="row-one row justify-content-center brown-bg" style="color: wheat;">
-            <div class="col-md-4 text-center">
+        <div class="row-one row justify-content-center brown-bg d-none d-lg-flex" style="color: wheat;">
+            <div class="col-lg-4 text-center">
                 <div>
-                    <img src="Images/list_2.png" alt="" style="height: 88px;">
-                    <p class="">Опыт работы более 10 лет</p>
+                    <img class="first-block_images" src="Images/list_2.png" alt="">
+                    <p class="first-block_images-text">Опыт работы более 10 лет</p>
                 </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-lg-4 text-center">
                 <div>
-                    <img src="Images/galka_2.png" alt="" style="height: 88px;"> 
-                    <p>Опыт работы более 10 лет</p>
+                    <img class="first-block_images" src="Images/galka_2.png" alt=""> 
+                    <p class="first-block_images-text">Опыт работы более 10 лет</p>
                 </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-lg-4 text-center">
                 <div>
-                    <img src="Images/grow_2.png" alt="" style="height: 88px;">
-                    <p>Опыт работы более 10 лет</p>
+                    <img class="first-block_images" src="Images/grow_2.png" alt="">
+                    <p class="first-block_images-text">Опыт работы более 10 лет</p>
                 </div>
             </div>
         </div>
 
-        <div class="row-two row text-center my-3">
-            <div class="col "><img class="text-align-center" src="Images/Group 5.png" alt=""></div>
+        <div class="row-two text-center my-3">
+            <div class="col-12 d-flex flex-column align-items-center">
+                <img class="tree-img" src="Images/listiki.png" alt="Дерево">
+                <div class="tree-line"></div>
+            </div>
         </div>
 
         <div class="row-one row justify-content-center brown-bg" style="color: wheat;" id="1">
@@ -150,14 +157,22 @@
             </div>
         </div>
 
-        <div class="row-two row my-1 align-items-end" id="2">
+        <div class="row-two row my-1 align-items-end d-none d-lg-flex" id="2">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: green; margin-top: 50px; font-family: Merriweather !important;">НАШИ ПРОЕКТЫ</div>
             </div>
-            <div class="col-md-9 text-center d-none d-md-flex">
+            <div class="col-md-9 text-center">
                 <div class="col "><img class="img-fluid" src="Images/Group 6.png" alt=""></div>
             </div>
         </div>
+        <div class="row-two text-center my-3 d-block d-lg-none">
+            <div class="col-12 d-flex flex-column align-items-center">
+                <img class="tree-img" src="Images/listiki.png" alt="Дерево">
+                <div class="tree-line"></div>
+                <div class="h5" style="margin-bottom: 0px; color: green; margin-top: 10px; font-family: Merriweather !important;">НАШИ ПРОЕКТЫ</div>
+            </div>
+        </div>
+        
 
         <div class="row g-1 my-1" style="color: wheat;">
             <div class="col-md-6 position-relative">
@@ -177,14 +192,14 @@
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <div class="row mx-4">
-                                                <div class="col-12 col-md-7 mb-4">
+                                                <div class="col-12 col-lg-8 mb-4 order-1 order-lg-1">
                                                     <h6 class="mb-2" style="font-family: Merriweather !important; font-size: 18px;">Правдинское</h6>
                                                     <div class="row mb-3">
                                                         <div class="col-12">
-                                                            <img class="image-fluid w-100 text-align-center" src="Images/Rectangle 13.png" alt="">
+                                                            <img class="image-fluid w-100" src="Images/Rectangle 13.png" alt="">
                                                         </div>
                                                     </div>
-                                                    <div class="row g-2">
+                                                    <div class="row g-2 d-none d-lg-flex">
                                                         <div class="col-4 d-none d-lg-inline">
                                                             <img class="image-fluid w-100" src="Images/sliders/1_2.png" alt="">
                                                         </div>
@@ -196,7 +211,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5 mt-5" style="font-size: 14px;">
+                                                <div class="col-12 col-lg-4 mt-0 mt-lg-5 order-2 order-lg-2" style="font-size: 14px;">
                                                     <p>
                                                         <ul>
                                                             <li>Черновая планировка и уборка мусора</li>
@@ -228,7 +243,7 @@
                                                         <ul>
                                                             <li>Укладка рулонного газона</li>
                                                         </ul>
-                                                        <p class="text-align-end"><strong>Сумма: 1 400 000 руб.</strong></p>
+                                                        <p style="margin-left: 30px !important;"><strong>Сумма: 1 400 000 руб.</strong></p>
                                                     </p>
                                                 </div>
                                             </div>
@@ -236,15 +251,15 @@
                                         </div>
                                         <div class="carousel-item">
                                             <div class="row mx-4">
-                                                <div class="col-12 col-md-7 mb-5">
+                                                <div class="col-12 col-lg-8 mb-4 order-1 order-lg-1">
                                                     <h6 class="mb-2" style="font-family: Merriweather !important; font-size: 18px;">Репино</h6>
                                                     <div class="row mb-3">
                                                         <div class="col-12">
                                                             <img class="image-fluid w-100" src="Images/sliders/2_1.png" alt="">
                                                         </div>
                                                     </div>
-                                                    <div class="row g-2">
-                                                        <div class="col-4 d-none d-lg-inline ">
+                                                    <div class="row g-2 d-none d-lg-flex">
+                                                        <div class="col-4 d-none d-lg-inline">
                                                                 <img class="image-fluid w-100" src="Images/sliders/2_2.png" alt="">
                                                         </div>
                                                         <div class="col-4 d-none d-lg-inline mx-0">
@@ -255,7 +270,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5 mt-5" style="font-size: 14px;">
+                                                <div class="col-12 col-lg-4 mt-0 mt-lg-5 order-2 order-lg-2" style="font-size: 14px;">
                                                     <p>
                                                         <ul>
                                                             <li>Ландшафтное проектирование участка</li>
@@ -276,22 +291,22 @@
                                                             <li>Посадка цветника и живой изгороди</li>
                                                         </ul>
                                                     </p>
-                                                    <p><strong>Сумма: 400 000 руб.</strong></p>
+                                                    <p style="margin-left: 30px !important;"><strong>Сумма: 400 000 руб.</strong></p>
                                                 </div>
                                             </div>
 
                                         </div>
                                         <div class="carousel-item">
                                             <div class="row mx-4">
-                                                <div class="col-12 col-md-7 mb-5">
+                                                <div class="col-12 col-lg-8 mb-4 order-1 order-lg-1">
                                                     <h6 style="font-family: Merriweather !important; font-size: 18px;">Петергоф</h6>
                                                     <div class="row mb-3">
                                                         <div class="col-12">
                                                             <img class="image-fluid w-100" src="Images/sliders/3_1.png" alt="">
                                                         </div>
                                                     </div>
-                                                    <div class="row g-2">
-                                                        <div class="col-4 d-none d-lg-inline ">
+                                                    <div class="row g-2 d-none d-lg-flex">
+                                                        <div class="col-4 d-none d-lg-inline">
                                                                 <img class="image-fluid w-100" src="Images/sliders/3_2.png" alt="">
                                                         </div>
                                                         <div class="col-4 d-none d-lg-inline mx-0">
@@ -302,7 +317,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5 mt-5" style="font-size: 14px;">
+                                                <div class="col-12 col-lg-4 mt-0 mt-lg-5 order-2 order-lg-2" style="font-size: 14px;">
                                                     <p>
                                                         <ul>
                                                             <li>Обустройство и укрепление дренажной канавы</li>
@@ -314,17 +329,17 @@
                                                             <li>Укладка рулонного газона</li>
                                                         </ul>
                                                     </p>
-                                                    <p><strong>Сумма: 185 000 руб.</strong></p>
+                                                    <p style="margin-left: 30px !important;"><strong>Сумма: 185 000 руб.</strong></p>
                                                 </div>
                                             </div>
 
                                         </div>
                                     </div>
-                                    <button class="carousel-control-prev justify-content-center" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="margin-left: -70px;">
+                                    <button class="carousel-control-prev justify-content-center" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Предыдущий</span>
                                     </button>
-                                    <button class="carousel-control-next justify-content-center" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style="margin-right: -70px;">
+                                    <button class="carousel-control-next justify-content-center" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Следующий</span>
                                     </button>
@@ -357,15 +372,20 @@
     </div>
 
 
-    <img class="w-100 h-100 object-fit-cover position-absolute" src="Images/фоновая_2.jpg" alt="" style="z-index: -1;" id="3">
+    <img class="w-100 h-100 object-fit-cover position-absolute  d-none d-lg-block" src="Images/фоновая_2.jpg" alt="" style="z-index: -1;" id="3">
     <div class="block-three container mx-auto" style="margin-top: 50px;">
-        <div class="row my-1 align-items-end">
+        <div class="row-two row my-1 align-items-end d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: wheat; font-family: Merriweather !important;">УХОД ЗА САДОМ</div>
             </div>
             <div class="col-md-9 text-center">
-                <div class="col "><img class="img-fluid" src="Images/полоска.png" alt=""></div>
+                <div class="col"><img class="img-fluid" src="Images/полоска.png" alt=""></div>
             </div>
+        </div>
+
+        <div class="row text-center d-lg-none d-block">
+            <div class="col"><img class="text-align-center" src="Images/Group 5.png" alt=""></div>
+            <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important; margin-top: 10px;">УХОД ЗА САДОМ</div>
         </div>
 
         <div class="row-one row justify-content-center brown-bg mt-5 mb-5" style="color: wheat;">
@@ -378,11 +398,11 @@
             </div>
         </div>
 
-        <div class="row bg-white mb-4" style="border-radius: 8px;">
+        <div class="row bg-white mb-4 w-90" style="border-radius: 8px; border: 2px solid grey;">
             <div class="col pb-7 mb-5">
                 <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start mt-5">
 
-                    <div class="nav nav-pills mb-4 mb-md-0 me-md-2 w-100" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="gap: 10px; width: 100%; max-width: 300px;">
+                    <div class="nav nav-pills mb-4 mb-md-0 me-md-2 w-100 p-auto" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="gap: 10px; width: 100%; max-width: 300px;">
                         <button class="nav-link active w-100 tab_button " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">СЕЗОННЫЕ ВЫЕЗДЫ</button>
                         <button class="nav-link w-100 tab_button" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">ОСЕНЬ</button>
                         <button class="nav-link w-100 tab_button" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">ВЕСНА</button>
@@ -390,12 +410,12 @@
                     </div>
                     
                     <div class="tab-content flex-grow-1" id="v-pills-tabContent">
-                        <div class="tab-pane fade show mt-4 active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                        <div class="tab-pane fade show mt-4 m-auto active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
                             <ul>
                                 <li>Стоимость выезда рассчитывается индивидуально (в зависимости от: площади участка, удалённости, сложности проводимых работ, количества задействованных людей).</li>
                             </ul>
                         </div>
-                        <div class="tab-pane fade mt-4" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                        <div class="tab-pane fade mt-4 m-auto" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
                             <ul>
                                 <li>Уход за цветниками (обрезка сухого, рыхление, прополка)</li>
                                 <li>Уход за газоном (осенняя подкормка)</li>
@@ -405,7 +425,7 @@
                                 <li>Подготовка растений к зиме</li>
                             </ul>
                         </div>
-                        <div class="tab-pane fade mt-4" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+                        <div class="tab-pane fade mt-4 m-auto" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
                             <ul>
                                 <li>Обрезка плодовых (производится с ноября по март, до первого сокодвижения)</li>
                                 <li>Санитарная обрезка роз (производтся с апреля по май, удаление повреждённых веток после зимы)</li>
@@ -429,15 +449,15 @@
                     
                 </div>
 
-                <div class="mt-4" style="font-size: 14px;">
+                <div class="mt-4 d-none d-lg-block" style="font-size: 14px;">
                     <span>*Выезд и консультация специалиста оплачивается отдельно.</span> <br>
                     <span>*Отдельно оплачивается: вывоз мусора, химия, удобрение, материалы для дополнительных работ ( например: земля, мульча, бордюрная лента и т.д.)</span>
                 </div>
             </div>
         </div>
     </div>
-    <div  class="block-three container mx-auto" style="margin-top: 30px;">
-        <div class="row align-items-end mt-5" id="4">
+    <div  class="block-three container mx-auto" style="margin-top: 70px !important;">
+        <div class="row align-items-end mt-5 d-none d-lg-flex" id="4">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important;">ЛАНДШАФТ</div>
             </div>
@@ -445,78 +465,146 @@
                 <div class="col "><img class="img-fluid" src="Images/Group 3.png" alt=""></div>
             </div>
         </div>
+        <div class="row text-center d-lg-none d-block">
+            <div class="col"><img class="text-align-center" src="Images/Group 5.png" alt=""></div>
+            <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important; margin-top: 10px;">ЛАНДШАФТ</div>
+        </div>
 
-        <div class="row-one row justify-content-center brown-bg mt-4 mb-4">
+        <div class="row-one row justify-content-center brown-bg mt-4 mb-4  d-none d-lg-block">
             <div class="col"></div>
         </div>
         
-        <div class="landscape-grid">
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">1. Ландшафтное проектирование участка</p>
-                <img class="image_grid" src="Images/pics for grid/1.png" alt="" class="img-fluid">
+        <div class="landscape-grid m-auto">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">1. Ландшафтное проектирование участка</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/1.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">2. Подготовка участка</p>
-                <img class="image_grid" src="Images/pics for grid/2.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">2. Подготовка участка</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/2.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">3. Создание дренажной системы</p>
-                <img class="image_grid" src="Images/pics for grid/3.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p class="text-start" style="font-size: 14px;">3. Создание дренажной системы</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/3.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">4. Устройство дорожного покрытия</p>
-                <img class="image_grid" src="Images/pics for grid/4.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">4. Устройство дорожного покрытия</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/4.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">5. Альпийские горки, рокарии, альпинарии</p>
-                <img class="image_grid" src="Images/pics for grid/5.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">5. Альпийские горки, рокарии, альпинарии</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/5.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">6. Устройство ручьев, водоемов, каскадов</p>
-                <img class="image_grid" src="Images/pics for grid/6.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">6. Устройство ручьев, водоемов, каскадов</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/6.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">7. Строительство, маф</p>
-                <img class="image_grid" src="Images/pics for grid/7.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">7. Строительство, маф</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/7.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">8. Подпорные стенки</p>
-                <img class="image_grid" src="Images/pics for grid/8.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">8. Подпорные стенки</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/8.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">9. Посадка растений</p>
-                <img class="image_grid" src="Images/pics for grid/9.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">9. Посадка растений</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/9.png" alt="">
             </div>
-            <div class="grid-item p-2 text-center display-flex justify-content-center">
-                <p style="font-size: 14px; margin: 0px;">10. Устройство газона</p>
-                <img class="image_grid" src="Images/pics for grid/10.png" alt="" class="img-fluid">
+            <div class="grid-item p-2 text-start d-flex justify-content-center">
+                <p style="font-size: 14px;">10. Устройство газона</p>
+                <img class="image_grid img-fluid" src="Images/pics for grid/10.png" alt="">
             </div>
         </div>
     </div>
 
+    <div class="block-four container mx-auto" id="5">
+        <div class="row align-items-end mt-5 mb-5 d-none d-lg-flex" id="4">
+            <div class="col-md-3">
+                <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important;">FAQ</div>
+            </div>
+            <div class="col-md-9 text-center">
+                <div class="col "><img class="img-fluid" src="Images/Group 3.png" alt=""></div>
+            </div>
+        </div>
+        <div class="row text-center d-lg-none d-block mb-4">
+            <div class="col"><img class="text-align-center" src="Images/Group 5.png" alt=""></div>
+            <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important; margin-top: 10px;">FAQ</div>
+        </div>
+
+        <div class="accordion w-75 m-auto mb-5" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    С чего начать благоустройство участка?
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Начать лучше всего с вызова нашего ландшафтного специалиста на участок. Бесплатный выезд и консультация позволяют оценить фронт работ, ваши пожелания, особенности почвы и рельефа, а затем составить точную смету и план действий. Это помогает избежать ошибок и сэкономить ваш бюджет.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Как формируется стоимость работ?
+                </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Цена складывается из стоимости материалов (растения, плитка, системы полива и т.д.) и самих работ. После консультации и замера участка мы составляем подробную смету, где каждая позиция прозрачна и согласовывается с вами. Фиксированная цена в договоре защищает вас от непредвиденных расходов.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Вы предоставляете гарантию на работы и растения?
+                </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Да, мы предоставляем гарантию на все виды строительных и монтажных работ (например, на мощение и системы полива). На посадочный материал также дается гарантия при условии соблюдения рекомендаций по уходу, которые мы предоставляем. Все гарантийные сроки прописываются в договоре.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Что делать, если растение не прижилось?
+                </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    В течение гарантийного срока, если растение погибло не по вашей вине, мы бесплатно заменим его на аналогичное. Наши дендрологи помогут определить причину и дадут дальнейшие рекомендации.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class=" row text-center my-3">
         <div class="col "><img class="text-align-center" src="Images/Group 5.png" alt=""></div>
     </div>
 
 
-
-    <div class="row text-center justify-content-center ms-5 me-5" style="margin-left: 20px; margin-top: 10px;" id="5">
+    <div class="row text-center justify-content-center ms-5 me-5" style="margin-left: 20px; margin-top: 10px;" id="6">
         <h5 style="font-family: Merriweather !important; color: green; text-align: center; margin-bottom: 20px;">ОТЗЫВЫ</h5>
-        <div class="col-4 mb-5">
+        <div class="col-lg-4 col-12 mb-5">
             <img src="Images/Ellipse 17.png" alt="">
             <h6 class="my-4">Михаил</h6>
-            <p>К компании relief image обратился в конце 2019 года, и летом 2020 все работы были закончены. Мы с семьей живём в пос. Правдинское озеро, хотели наш пустой и неровный участок превратить в уютный зеленый сад, с хорошим газоном, огородом и создать цветники у дома. Работой довольны, команда Надежды теперь занимается обслуживанием нашего участка.</p>
+            <p class="w-75 m-auto">К компании relief image обратился в конце 2019 года, и летом 2020 все работы были закончены. Мы с семьей живём в пос. Правдинское озеро, хотели наш пустой и неровный участок превратить в уютный зеленый сад, с хорошим газоном, огородом и создать цветники у дома. Работой довольны, команда Надежды теперь занимается обслуживанием нашего участка.</p>
         </div>
-        <div class="col-4 mb-5">
+        <div class="col-lg-4 col-12 mb-5">
             <img src="Images/Ellipse 17.png" alt="">
             <h6 class="my-4">Наталья</h6>
-            <p>В 2016 году понадобились специалисты по уходу за садом. С командой Надежды наш сад зацвёл новыми красками. В том же году мы купили дом в Репино. Хотели создать уютный уголок с зоной отдыха. И уже тогда мы понимали, кому доверить воплощение наших желаний. Работой довольны, все предпочтения были учтены. По сегодняшний день мы доверяем наш сад только специалистам relief image.</p>
+            <p class="w-75 m-auto">В 2016 году понадобились специалисты по уходу за садом. С командой Надежды наш сад зацвёл новыми красками. В том же году мы купили дом в Репино. Хотели создать уютный уголок с зоной отдыха. И уже тогда мы понимали, кому доверить воплощение наших желаний. Работой довольны, все предпочтения были учтены. По сегодняшний день мы доверяем наш сад только специалистам relief image.</p>
         </div>
-        <div class="col-4 mb-5">
+        <div class="col-lg-4 col-12 mb-5">
             <img src="Images/Ellipse 17.png" alt="">
             <h6 class="my-4">Ольга</h6>
-            <p>Наш участок находится в Петергофе. К Надежде обратились в 2016 году. Была необходимость в уходе за садом, растения болели, а также, было много насекомых. Работой команды довольны. Вот уже 4 года доверяем наш сад специалистам!</p>
+            <p class="w-75 m-auto">Наш участок находится в Петергофе. К Надежде обратились в 2016 году. Была необходимость в уходе за садом, растения болели, а также, было много насекомых. Работой команды довольны. Вот уже 4 года доверяем наш сад специалистам!</p>
         </div>
     </div>
 
@@ -526,16 +614,24 @@
     <div class="position-relative" style="height: 400px; overflow: hidden;">
         <img class="position-absolute w-100 h-100 object-fit-cover" style="z-index: -1; height: 400px !important;" src="Images/Group 23.png" alt="">
         
-        <div class="container mx-auto mt-5 pt-5">
+        <div class="container mt-5 pt-2 pt-lg-5 footer_new-icon">
             <div class="row mb-5">
-                <div class="col-md-6 text-start">
+                <div class="col-md-6">
                     <h5 class="text-white" style="font-family: Merriweather !important;">Контакты</h5>
                 </div>
-                <div class="col-md-6 text-end">
-                    <button class="border-0 mx-2" style="background-color: #5A554D !important;"><img src="Images/Mask Group.png" alt=""></button>
-                    <button class="border-0 mx-2" style="background-color: #5A554D !important;"><img src="Images/Mask Group2.png" alt=""></button>
-                    <button class="border-0 mx-2" style="background-color: #5A554D !important;"><img src="Images/Mask Group3.png" alt=""></button>
+                <div class="col-md-6 text-md-end text-end d-none d-lg-block">
+                    <div class="d-flex flex-md-row flex-column justify-content-md-end justify-content-start align-items-md-end gap-2">
+                        <button class="border-0 btn btn-outline-light"><img src="Images/Mask Group.png" alt=""></button>
+                        <button class="border-0 btn btn-outline-light"><img src="Images/Mask Group2.png" alt=""></button>
+                        <button class="border-0 btn btn-outline-light"><img src="Images/Mask Group3.png" alt=""></button>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="d-block d-lg-none">
+                <button class="border-0 btn btn-custom"><img src="Images/Mask Group.png" alt=""></button>
+                <button class="border-0 btn btn-custom"><img src="Images/Mask Group2.png" alt=""></button>
+                <button class="border-0 btn btn-custom"><img src="Images/Mask Group3.png" alt=""></button>
             </div>
 
             <div class="row align-items-end mt-5">
@@ -543,17 +639,16 @@
                     <span>Телефон</span> <br>
                     <img src="Images/kisspng-telephone-number-computer-icons-telephone-symbol-5adc94ac1e1fd8 3.png" alt=""><strong>+7 (981) 98-50-04</strong>
                 </div>
-                <div class="col text-white">
+                <div class="col text-white d-none d-md-block">
                     <span>Email</span> <br>
                     <strong>relief.image@mail.ru</strong>
                 </div>
-                <div class="col text-end text-white">
+                <div class="col text-end text-white d-none d-md-block">
                     <img src="Images/локация.png" alt="">
                     <strong>Санкт-Петербург и ЛО</strong>
                 </div>
             </div>
         </div>
-        
     </div>
     
 
