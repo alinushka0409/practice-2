@@ -9,9 +9,14 @@
   margin-right: 90px;
 }
 
+.text_in_nav {
+  font-size: 14px !important;
+}
+
 .nav-link {
   margin: 10pt;
   color: #fff;
+  font-size: 14px !important;
 }
 
 .block-one {
@@ -197,6 +202,10 @@
 
 .tab_button {
   margin: 0px;
+}
+
+.block-three {
+  margin-top: 50px;
 }
 
 @font-face {
@@ -394,6 +403,15 @@ ul {
   .block-two {
     margin-top: 30px !important;
   }
+  .carousel-control-prev {
+    margin-left: -25px !important;
+  }
+  .carousel-control-next {
+    margin-right: -25px !important;
+  }
+  .block-three {
+    margin-top: 60px !important;
+  }
 }
 @media (max-width: 768px) {
   .icons {
@@ -419,5 +437,27 @@ ul {
   }
   .footer_new-icon {
     margin-left: 50px !important;
+  }
+}
+@media (max-width: 460px) {
+  .carousel-control-prev {
+    margin-left: -15px !important;
+  }
+  .carousel-control-next {
+    margin-right: -15px !important;
+  }
+}
+@media (max-width: 475px) {
+  .logo {
+    position: inherit !important;
+    left: 0px !important;
+    margin-left: 0px !important;
+    margin: auto !important;
+    text-align: center !important;
+  }
+  .text-under-logo {
+    margin: auto;
+    font-size: 20px !important;
+    margin-bottom: 30px !important;
   }
 }/*# sourceMappingURL=main.css.map */

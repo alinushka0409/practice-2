@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg mx-0" style="backdrop-filter: blur(10px); max-width: 1520px; left: 50%; transform: translateX(-50%)">
+    <nav class="navbar fixed-top navbar-expand-lg mx-0" style="backdrop-filter: blur(10px); max-width: 1520px; left: 50%; transform: translateX(-50%); height: 80px;">
         <div class="container">
             <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
@@ -43,11 +43,11 @@
             <div class="d-lg-block d-none ms-auto">
                 <div class="d-flex align-items-center">
                     <img src="Images/phone icon.png" alt="" style="height: 15px; margin: 5px;"> 
-                    <span>тел.+7 (981) 98-50-04</span>
+                    <span class="text_in_nav">тел.+7 (981) 98-50-04</span>
                 </div>
                 <div class="d-flex align-items-center">
                     <img src="Images/location icon.png" alt="" style="height: 15px; margin: 5px;"> 
-                    <span>Санкт-Петербург и ЛО</span>
+                    <span class="text_in_nav">Санкт-Петербург и ЛО</span>
                 </div>
             </div>
         </div>
@@ -56,11 +56,9 @@
 
     <div class="block-one container-fluid position-relative" style="height: 746px;">
         <img class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" src="Images/Главная картинка.jpg" alt="" style="z-index: -1;">
-        <div class="position-relative z-1" style="margin-left: 90px; padding-top: 150px; width: 80%;">
+        <div class="logo position-relative z-1" style="margin-left: 90px; padding-top: 150px; width: 80%;">
             <img src="Images/ЛОГОТИП главная.png" alt="">
-            <p class="responsive-heading w-75" style="color: white; font-size: 36px; font-family: Merriweather !important;">Благоустройство и озеленение участков</p>
-
-            
+            <p class="text-under-logo responsive-heading w-75" style="color: white; font-size: 36px; font-family: Merriweather !important;">Благоустройство и озеленение участков</p>
         </div>
 
         <div class=" button_modal text-center text-md-start"><button class="btn btn-outline-light btn-warning rounded-pill-3 px-5 text-black" type="button" data-bs-toggle="modal" data-bs-target="#myModal" style="border: 2px solid #FF8C00; background-color: rgba(255, 140, 0, 0.5); font-size: 24px;"><span style="color: #FFDF9E;">Оставить заявку</span></button></div>
@@ -77,12 +75,12 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="mb-3">
-                                        <input type="text" class="form-control" id="name" placeholder="Имя*" minlength="2" required>
+                                        <input type="text" class="form-control" id="name" placeholder="Введите имя" minlength="2" required>
                                         <div class="invalid-feedback">Пожалуйста, введите имя (минимум 2 символа)</div>
                                     </div>
                                     
                                     <div class="mb-3">
-                                        <input type="tel" class="form-control" id="phone" placeholder="Телефон*" pattern="[\+]?[0-9\s\-\(\)]+" required>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Телефон: +_ (___)___-__-__" pattern="[\+]?[0-9\s\-\(\)]+" required>
                                         <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона</div>
                                     </div>
                                     
@@ -187,13 +185,13 @@
                             <div class="modal-header border-0">
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                             </div>
-                            <div class="modal-body px-5">
+                            <div class="modal-body px-2 px-lg-4">
                                 <div id="carouselExample" class="carousel slide">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <div class="row mx-4">
                                                 <div class="col-12 col-lg-8 mb-4 order-1 order-lg-1">
-                                                    <h6 class="mb-2" style="font-family: Merriweather !important; font-size: 18px;">Правдинское</h6>
+                                                    <h6 class="mb-3" style="font-family: Merriweather !important; font-size: 18px;">Правдинское</h6>
                                                     <div class="row mb-3">
                                                         <div class="col-12">
                                                             <img class="image-fluid w-100" src="Images/Rectangle 13.png" alt="">
@@ -252,7 +250,7 @@
                                         <div class="carousel-item">
                                             <div class="row mx-4">
                                                 <div class="col-12 col-lg-8 mb-4 order-1 order-lg-1">
-                                                    <h6 class="mb-2" style="font-family: Merriweather !important; font-size: 18px;">Репино</h6>
+                                                    <h6 class="mb-3" style="font-family: Merriweather !important; font-size: 18px;">Репино</h6>
                                                     <div class="row mb-3">
                                                         <div class="col-12">
                                                             <img class="image-fluid w-100" src="Images/sliders/2_1.png" alt="">
@@ -299,7 +297,7 @@
                                         <div class="carousel-item">
                                             <div class="row mx-4">
                                                 <div class="col-12 col-lg-8 mb-4 order-1 order-lg-1">
-                                                    <h6 style="font-family: Merriweather !important; font-size: 18px;">Петергоф</h6>
+                                                    <h6 class="mb-3" style="font-family: Merriweather !important; font-size: 18px;">Петергоф</h6>
                                                     <div class="row mb-3">
                                                         <div class="col-12">
                                                             <img class="image-fluid w-100" src="Images/sliders/3_1.png" alt="">
@@ -373,7 +371,7 @@
 
 
     <img class="w-100 h-100 object-fit-cover position-absolute  d-none d-lg-block" src="Images/фоновая_2.jpg" alt="" style="z-index: -1;" id="3">
-    <div class="block-three container mx-auto" style="margin-top: 50px;">
+    <div class="block-three container mx-auto">
         <div class="row-two row my-1 align-items-end d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: wheat; font-family: Merriweather !important;">УХОД ЗА САДОМ</div>
@@ -388,10 +386,10 @@
             <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important; margin-top: 10px;">УХОД ЗА САДОМ</div>
         </div>
 
-        <div class="row-one row justify-content-center brown-bg mt-5 mb-5" style="color: wheat;">
+        <div class="row-one row justify-content-center brown-bg mt-4 mb-3" style="color: wheat;">
             <div class="col text-left">
                 <div style="margin-left: 20px; margin-top: 10px; border-radius: 8px;">
-                    <p class="">
+                    <p>
                         Каждый участок требует постоянный профессиональный уход, чтобы поддерживать ту красоту, которую планировал ландшафтный дизайнер. Это подразумевает большой комплекс работ, требующих много времени. Доверьтесь нашим опытным садоводам! И мы гарантируем качество работ, здоровый сад, а самое главное ваше сэкономленное время.
                     </p>
                 </div>
