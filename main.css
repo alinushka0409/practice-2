@@ -1,12 +1,7 @@
 .navbar {
   color: wheat;
-  max-width: 1440px;
+  max-width: 1520px;
   width: 100%;
-}
-
-.navbar-expand-lg {
-  margin-left: 90px;
-  margin-right: 90px;
 }
 
 .text_in_nav {
@@ -217,15 +212,13 @@
   src: url(Fonts/Roboto/Roboto.ttf);
 }
 html {
-  width: 100%;
-  max-width: 1520px;
+  width: 100% !important;
+  max-width: 1520px !important;
 }
 
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
   font-family: "Roboto" !important;
 }
 
@@ -266,6 +259,7 @@ html {
 .button_modal {
   position: relative;
   left: 90px;
+  width: 50%;
 }
 
 .first-block_images {
