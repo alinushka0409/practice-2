@@ -256,6 +256,22 @@ html {
   bottom: 120px;
 }
 
+.dropdown-toggle.nav-link {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.dropdown-toggle.nav-link:hover,
+.dropdown-toggle.nav-link:focus {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown-toggle.nav-link::after {
+  display: none !important;
+}
+
 .button_modal {
   position: relative;
   left: 90px;
@@ -357,6 +373,53 @@ ul {
   margin-top: -2px;
 }
 
+.toast {
+  min-width: 350px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.toast-body {
+  font-size: 16px;
+  font-weight: 500;
+  color: wheat;
+}
+
+.toast.show {
+  animation: toastSlideIn 0.3s ease-out;
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown {
+    text-align: left !important;
+  }
+  .navbar-nav .dropdown-toggle {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  .navbar-nav .dropdown-menu {
+    text-align: left !important;
+    position: static !important;
+    float: none !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .navbar-nav .dropdown-item {
+    color: white !important;
+    padding-left: 2rem !important;
+  }
+}
 @media (max-width: 768px) {
   .tree-img {
     max-width: 60px;
