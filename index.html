@@ -68,16 +68,13 @@
             const navbarCollapse = document.getElementById('navbarContent');
             const dropdownToggle = document.querySelector('.dropdown-toggle');
             
-            // Обработчик для всех ссылок навигации
             document.querySelectorAll('.navbar-nav a').forEach(link => {
                 link.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
-                    
-                    // Если это якорная ссылка (#1, #2 и т.д.)
+
                     if (href && href.startsWith('#')) {
                         e.preventDefault();
                         
-                        // Прокрутка к целевой секции
                         const targetId = href.substring(1);
                         const targetElement = document.getElementById(targetId);
                         
@@ -89,7 +86,6 @@
                             });
                         }
                         
-                        // Закрываем меню только на мобильных и только если это не dropdown-toggle
                         if (window.innerWidth < 992 && !this.classList.contains('dropdown-toggle')) {
                             const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
                             if (bsCollapse) {
@@ -100,12 +96,10 @@
                 });
             });
             
-            // Предотвращаем закрытие меню при клике на dropdown-toggle
             dropdownToggle.addEventListener('click', function(e) {
                 e.stopPropagation();
             });
             
-            // Дополнительная защита: предотвращаем закрытие при клике внутри dropdown-menu
             document.querySelector('.dropdown-menu').addEventListener('click', function(e) {
                 e.stopPropagation();
             });
@@ -232,13 +226,13 @@
             <div class="col-lg-4 text-center">
                 <div>
                     <img class="first-block_images" src="Images/galka_2.png" alt=""> 
-                    <p class="first-block_images-text">Опыт работы более 10 лет</p>
+                    <p class="first-block_images-text">Гарантия на растения</p>
                 </div>
             </div>
             <div class="col-lg-4 text-center">
                 <div>
                     <img class="first-block_images" src="Images/grow_2.png" alt="">
-                    <p class="first-block_images-text">Опыт работы более 10 лет</p>
+                    <p class="first-block_images-text">Лучшие питомники</p>
                 </div>
             </div>
         </div>
@@ -360,20 +354,10 @@
                                                     <p>
                                                         <ul>
                                                             <li>Ландшафтное проектирование участка</li>
-                                                        </ul>
-                                                        <ul>
                                                             <li>Планировка территории на плоскости</li>
-                                                        </ul>
-                                                        <ul>
                                                             <li>Создание дренажной системы</li>
-                                                        </ul>
-                                                        <ul>
                                                             <li>Устройство дорожного покрытия</li>
-                                                        </ul>
-                                                        <ul>
                                                             <li>Устройство рокария</li>
-                                                        </ul>
-                                                        <ul>
                                                             <li>Посадка цветника и живой изгороди</li>
                                                         </ul>
                                                     </p>
@@ -407,11 +391,7 @@
                                                     <p>
                                                         <ul>
                                                             <li>Обустройство и укрепление дренажной канавы</li>
-                                                        </ul>
-                                                        <ul>
                                                             <li>Посадка растений</li>
-                                                        </ul>
-                                                        <ul>
                                                             <li>Укладка рулонного газона</li>
                                                         </ul>
                                                     </p>
@@ -520,7 +500,7 @@
                                 <li>Уход за газоном (скарификация, аэрация, мульчирование, удобрение, производится после полного просыхания газона)</li>
                             </ul>
                         </div>
-                        <div class="tab-pane fade mt-4" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+                        <div class="tab-pane fade mt-4 m-auto" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
                             <ul>
                                 <li>Уход за цветниками (прополка, обрезка сухого, рыхление)</li>
                                 <li>Формовочная обрезка (фигурная стрижка, стрижка изгородей, производится по мере роста)</li>
@@ -542,6 +522,7 @@
             </div>
         </div>
     </div>
+    
     <div  class="block-three container mx-auto" style="margin-top: 70px !important;" id="4">
         <div class="row align-items-end mt-5 d-none d-lg-flex">
             <div class="col-md-3">
