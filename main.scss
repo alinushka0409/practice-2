@@ -18,9 +18,13 @@ html {
 }
 
 * {
-    padding: 0;
     box-sizing: border-box;
     font-family: "Roboto" !important;
+}
+
+body.modal-open {
+    overflow: auto !important;
+    padding-right: 0 !important;
 }
 
 .btn-custom {

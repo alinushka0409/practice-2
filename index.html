@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg w-100 m-0 p-0" style="backdrop-filter: blur(10px) !important; left: 0; right: 0;">
+    <nav class="navbar fixed-top navbar-expand-lg w-100 m-0 p-0" style="backdrop-filter: blur(10px) !important; left: 0; right: 0; background-color: #24451e3f;">
         <div class="container-fluid mx-auto p-0">
             <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Переключить навигацию" style="padding: 20px;">
@@ -20,13 +20,13 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="btn btn-secondary dropdown-toggle nav-link text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn btn-secondary nav-link dropdown-toggle text-white" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 О компании
                             </a>
 
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#1">О нас</a></li>
-                                <li><a class="dropdown-item" href="#">Сертификаты</a></li>
+                                <li><a class="dropdown-item">Сертификаты</a></li>
                             </ul>
                         </div>
                     </li>
@@ -63,6 +63,55 @@
         </div>
     </nav>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarCollapse = document.getElementById('navbarContent');
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            
+            // Обработчик для всех ссылок навигации
+            document.querySelectorAll('.navbar-nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Если это якорная ссылка (#1, #2 и т.д.)
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        
+                        // Прокрутка к целевой секции
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            const offsetTop = targetElement.offsetTop;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                        
+                        // Закрываем меню только на мобильных и только если это не dropdown-toggle
+                        if (window.innerWidth < 992 && !this.classList.contains('dropdown-toggle')) {
+                            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                            if (bsCollapse) {
+                                bsCollapse.hide();
+                            }
+                        }
+                    }
+                });
+            });
+            
+            // Предотвращаем закрытие меню при клике на dropdown-toggle
+            dropdownToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            // Дополнительная защита: предотвращаем закрытие при клике внутри dropdown-menu
+            document.querySelector('.dropdown-menu').addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+
 
     <div class="block-one container-fluid position-relative" style="height: 746px;">
         <img class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" src="Images/Главная картинка.jpg" alt="" style="z-index: -1;">
@@ -80,7 +129,7 @@
                         <div class="col-xl-4 text-center d-flex justify-content-center d-none d-xl-flex" style="background-color: wheat;">
                             <img src="Images/ЛОГОТИП главная.png" alt="">
                         </div>
-                        <div class="col-xl-8 text-white pt-3 " style="background-color: #504B47;">
+                        <div class="col-xl-8 text-white p-3" style="background-color: #504B47;">
                             <h5 style="color: wheat; margin-left: 15px;">Получить консультацию специалиста</h5>
                             <div class="modal-body">
                                 <form id="feedbackForm">
@@ -172,7 +221,7 @@
 
 
 
-    <div class="block-two container mx-auto" style="margin-top: -50px;">
+    <div class="block-two container mx-auto" style="margin-top: -50px;" id="2">
         <div class="row-one row justify-content-center brown-bg d-none d-lg-flex" style="color: wheat;">
             <div class="col-lg-4 text-center">
                 <div>
@@ -212,7 +261,7 @@
             </div>
         </div>
 
-        <div class="row-two row my-1 align-items-end d-none d-lg-flex" id="2">
+        <div class="row-two row my-1 align-items-end d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: green; margin-top: 50px; font-family: Merriweather !important;">НАШИ ПРОЕКТЫ</div>
             </div>
@@ -229,7 +278,7 @@
         </div>
         
 
-        <div class="row g-1 my-1" style="color: wheat;">
+        <div class="row g-1 my-1" style="color: wheat;"> 
             <div class="col-md-6 position-relative">
                 <button class="btn w-100 h-100 border-0 bg-transparent p-0" type="button" data-bs-toggle="modal" data-bs-target="#onecardModal">
                     <img class="w-100 h-100 object-fit-cover" src="Images/правдинское.png" alt="Правдинское">
@@ -409,8 +458,8 @@
     </div>
 
 
-    <img class="position-absolute d-none d-lg-block" src="Images/фоновая_2.jpg" alt="" style="z-index: -1; width: 1520px; height: 700px; max-width: 100%;" id="3">
-    <div class="block-three container mx-auto">
+    <img class="position-absolute d-none d-lg-block" src="Images/фоновая_2.jpg" alt="" style="z-index: -1; width: 1520px; height: 700px; max-width: 100%;">
+    <div class="block-three container mx-auto" id="3">
         <div class="row-two row my-1 align-items-end d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: wheat; font-family: Merriweather !important;">УХОД ЗА САДОМ</div>
@@ -493,8 +542,8 @@
             </div>
         </div>
     </div>
-    <div  class="block-three container mx-auto" style="margin-top: 70px !important;">
-        <div class="row align-items-end mt-5 d-none d-lg-flex" id="4">
+    <div  class="block-three container mx-auto" style="margin-top: 70px !important;" id="4">
+        <div class="row align-items-end mt-5 d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important;">ЛАНДШАФТ</div>
             </div>
@@ -556,7 +605,7 @@
     </div>
 
     <div class="block-four container mx-auto" id="5">
-        <div class="row align-items-end mt-5 mb-5 d-none d-lg-flex" id="4">
+        <div class="row align-items-end mt-5 mb-5 d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="h5" style="margin-bottom: 0px; color: green; font-family: Merriweather !important;">FAQ</div>
             </div>
